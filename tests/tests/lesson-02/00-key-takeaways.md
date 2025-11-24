@@ -1,7 +1,7 @@
 # Lessons Learned - Auto Testing
 
 ## Lesson 2:
-Ngày học: 21/11/2025
+Ngày học: 21/11/2025:1
 
 
 ### Javascrip - Vòng lặp
