@@ -1,0 +1,4 @@
+git commit --amend 
+git commit --amend -m"<message" - thay đổi message 
+git restore --staged <file> - restore 1 file cụ thể từ Staging về Working Directory
+git reset HEAD~1 - reset 1 commit 
