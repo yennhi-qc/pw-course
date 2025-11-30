@@ -41,6 +41,18 @@ Ngày học: 21/11/2025:
 3. Repository: Các commit (phiên bản)
 - git commit -m “feat: add test 1”
 
+**Tổng kết Git**
+
+Làm 1 lần duy nhất
+- Khởi tạo repo local: “git init”
+- Tạo repo GitHub và liên kết tới repo local: “git remote and origin <url>” 
+
+Làm mỗi khi có thay đổi
+- Thêm file vào staging: “git add .”
+- Commit file: “git commit -m “<message>””
+- push code: “git push origin main” 
+
+
 ### Javascrip basic
 1. Chương trình đầu tiên "Hello world!"
 - console.log("nội dung");
@@ -75,10 +87,10 @@ console.log("nội dung");
 
 - Khai báo hằng:
 <từ khoá> <tên hằng> = <giá trị>
-- Từ khoá: const
+- Từ khoá: const 
 
 
-3. Data Type
+4. Data Type
 - Trong Javascript, có 8 kiểu dữ liệu, chia làm 2 nhóm chính:
     - Kiểu nguyên thuỷ (primitive types)
         - Number
@@ -92,15 +104,97 @@ console.log("nội dung");
     - Kiểu tham chiếu (reference types)
         - Object
 
-3.1. Number - Số nguyên, số thực 
+4.1. Number - Số nguyên, số thực 
 - const age = 25; // Số nguyên
 - const price = 19.99; // Số thực
 - const infinity = Infinity; // Vô hạn
 - const notANumber = NaN; //Không phải là số
 
+4.2. String - Chuỗi ký tự
 
-### Javascrip - Câu điều kiện
-#### Câu điều kiện if
+const name = "John"; //Dùng nháy kép
+const message = 'Hello'; //Dùng nháy đơn
+const template = `Age: 10`; //Dùng "backtick" 
+
+4.3. Data type - boolean
+- Giá trị logic
+const isActive = true; 
+const isComplete = false;
+
+**Làm sao để biết 1 biến có kiểu dữ liệu gì?**
+typeof <variable> 
+Output: number ||string || boolean
+
+5. Toán tử so sánh
+- So sánh bằng: == và ===
+- So sánh không bằng: !
+- So sánh lớn hơn, nhỏ hơn: >, <, <=, >= 
+- khác: !==
+
+5.1. So sánh hai bằng == (Loose Equality)
+- So sánh giá trị sau khi chuyển đổi kiểu (type coercion)
+**Ex**
+5 == "5" // true (chuyển string thành number)
+5 == "6" // false (chuyển string thành number)
+true == 1 // true (true chuyển thành 1)
+false == 0 // true (false chuyển thành 0)
+
+5.3. So sánh ba bằng === (Strict Equality)
+- So sánh giá trị và kiểu dữ liệu - không chuyển đổi kiểu
+**Ex**
+5 === "5" // false (khác kiểu)
+true === 1 //false (khác kiểu)
+false === 0 //false (khác kiểu)
+5 === 5 // true (cùng kiểu, cùng giá trị)
+
+6. Toán tử logic
+- Toán tử logic dùng để kết hợp nhiều điều kiện và trả về boolean
+    - && (AND): trả về đúng nếu cả 2 vế của mệnh đề đúng
+    - || (OR): trả về đúng nếu 1 trong 2 vế của mệnh đề đúng
+
+
+7. Toán tử một ngôi
+- Là 1 toán tử chỉ cần một toán hạng để thực hiện
+**Ex**
+let x = 5;
+x++; 
+++x;
+x--;
+--x;
+- Hai loại:
+    - Prefix: toán tử nằm ở phía trước - tăng trước, trả về sau
+        - ++x;
+        - --x;
+    - Postfix: toán tử nằm ở phía sau - trả về trước, tăng sau
+        - x++;
+        - x--;
+**Ex**
+let a = 10
+b = ++a; // tăng 1 lên 11 rồi trả về b có giá trị là 11
+
+let c = 10; 
+d = c++ // trả về giá trị 10 cho d rồi mới tăng => d có giá trị là 10
+
+8. Toán tử toán học: +, -, *, /
+**Ex**
+const firstNumber = 5;
+const secondNumber = 10;
+const result = firstNumber + secondNumber; //result = 15
+
+**Lưu ý**
+- Khi chia cho 0, sẽ ra kết quả infinity (vô cực)
+
+
+9. Câu điều kiện
+- Câu điều kiện dùng để kiểm tra 1 đoạn logic trước khi chạy
+- Nếu điều kiện đúng thì mới chạy
+- Có các loại câu điều kiện:
+    - if
+    - if ...else
+    - if...else if...else
+    - switch...case
+
+9.1. Câu điều kiện if
 **Cú pháp**: 
 if (<điều kiện>){
     // code
@@ -118,14 +212,35 @@ if (hour >=6 && hour <= 11){
     console.log("Good morning);
 }
 
+**Ex3**: Kết hợp nhiều điều kiện - nested condition
+
+let hour = 8
+if (hour >=6){
+    if (hour <=11) {
+        console.log("Good morning");
+    }
+}
 
 
-### Javascrip - Vòng lặp
-#### Vòng lặp for i
-Cú pháp vòng lặp for (i)
+10. Vòng lặp
+- Vòng lặp dùng để lặp lại 1 đoạn logic
+- Có thể lặp 1 số lần nhất định, hoặc lặp vô hạn, tuỳ theo điều kiện dừng
+- Trong JavaScript, có các loại vòng lặp:
+    - for (i)
+    - for (of)
+    - for (each)
+    - for (in)
+    - while
+    - do...while
+
+**Vòng lặp for i**
+
+Cú pháp vòng lặp for (i): 
+
 for (<điều kiện khởi tạo>; <điều kiện lặp>; <cập nhật>){
     // code
 }
+
 Trong đó:
 - Điều kiện khởi tạo: chạy một lần duy nhất, khi vòng lặp bắt đầu
 - Điều kiện lặp: nếu đúng thì chạy tiếp, sai thì dừng.

@@ -1,11 +1,36 @@
 Tạo 3 file: file1, file2, file3
-Chạy lệnh: git init
-Chạy lệnh: git commit -m"init project"
-Chạy lệnh: git add file1
-Chạy lệnh: git commit -m"add file1"
-Chạy lệnh: git commit -m"add file"
+- Local: file1, file2, file3
+- Working directory:
+- Staging: 
+- Repository: 
 
-Liệt kê các file theo từng vùng sau khi thao tác một loạt các lệnh: 
-Vùng Working directory: file2, file3
-Vùng Staging: 
-Vùng Repository: file1
+Chạy lệnh: git init
+- Local: 
+- Working directory: file1, file2, file3
+- Staging: 
+- Repository: 
+
+Chạy lệnh: git commit -m"init project" -> commit thay đổi từ staging vào Repository. Tuy nhiên, Staging trống nên k có tác dụng.
+- Local: 
+- Working directory: file1, file2, file3
+- Staging: 
+- Repository:
+
+Chạy lệnh: git add file1
+- Local: 
+- Working directory: file2, file3
+- Staging: file1
+- Repository:
+
+Chạy lệnh: git commit -m"add file1"
+- Local: 
+- Working directory: file2, file3
+- Staging: 
+- Repository: file1
+
+Chạy lệnh: git commit -m"add file" 
+Lệnh này lỗi vì không có file nào ở Staging để commit
+- Local: 
+- Working directory: file2, file3
+- Staging: 
+- Repository: file1
